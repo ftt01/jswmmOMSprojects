@@ -15,8 +15,8 @@ OMS3.sim {
     model() {
     	  	
         components {
-            "prerunoff" "org.altervista.growworkinghard.jswmm.runoff.prerunoff"
-            "runoff" "org.altervista.growworkinghard.jswmm.runoff.runoff"
+            "prerunoff" "org.altervista.growworkinghard.jswmm.runoff.Prerunoff"
+            "runoff" "org.altervista.growworkinghard.jswmm.runoff.Runoff"
         }
         
         parameter {
