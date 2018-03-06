@@ -3,18 +3,28 @@
  *   A component printing a greeting.
  */
 import static oms3.SimBuilder.instance as OMS3
+import org.altervista.growworkinghard.jswmm.dataStructure.SWMMobject;
+
+resource "$oms_prj/lib"
 
 OMS3.sim {
 
+	SWMMobject dataStructure = new SWMMobject();
     // build()
     
     model() {
+    	  	
         components {
-           "c" "ex0.Component"
+            "prerunoff" "org.altervista.growworkinghard.jswmm.runoff.prerunoff"
+            "runoff" "org.altervista.growworkinghard.jswmm.runoff.runoff"
         }
         
         parameter {
-          "c.message" "Hello World  ..."
+            "prerunoff.dataStructure" dataStructure 
+        }
+        
+        connect {
+        	"prerunoff.dataStructure" "runoff.dataStructure"
         }
     }
 }
