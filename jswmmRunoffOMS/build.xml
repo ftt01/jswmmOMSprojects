@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jswmmRunoffOMS" default="all" basedir=".">
+    <description>
+       Manages the project 'jswmmRunoffOMS'.
+       Created at Tue Mar 06 23:09:23 CET 2018.
+    </description>
+    <import file=".oms/project.xml"/>
+</project>
